@@ -24,6 +24,7 @@
      [:meta {:name "viewport"
              :content "width=device-width, initial-scale=1"}]
      [:script {:src "https://code.jquery.com/jquery-2.1.4.min.js"}]
+     [:link {:rel "stylesheet" :href "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"}]
      (include-css (if (env :dev) "css/site.css" "css/site.min.css"))]
     [:body
      mount-target

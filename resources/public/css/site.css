@@ -6,6 +6,7 @@ body {
   font-size: 1.125em;
   color: #333;
   line-height: 1.5em;
+  background: #F9F9F9;
 }
 
 h1, h2, h3 {
@@ -35,16 +36,28 @@ a:hover {
 .smartbox {
   width: 100%;
   min-height: 200px;
+
   background: #669933;
   color: white;
+
+  background: #f8f5ec;
+  border: 1px solid #E0DED5;
+
 }
 
-.solid {
+.item {
   padding: 4px;
   margin: 2px;
-  background: #90BF60;
   border: 1px solid #90BF60;
   border-radius: 9px;
+}
+
+.pending {
+  background: grey;
+}
+
+.matched {
+    background: #90BF60;
 }
 
 *:focus {
@@ -56,12 +69,12 @@ input[type="text"]
     font-size: 1.125em;
     background: transparent;
     border: none;
-    color: white;
+    color: #2d2d2d;
     float: left;
 }
 
 .input-container {
-  padding: 4px;
+  padding: 6px;
   margin: 2px;
 }
 
@@ -69,3 +82,9 @@ input[type="text"]
   float: left;
   width: auto;
 }
+
+.padded {
+padding-right: 4px;
+
+}
+

@@ -19,6 +19,7 @@
                  [org.clojure/clojurescript "1.7.170" :scope "provided"]
                  [secretary "1.2.3"]
                  [jayq "2.5.4"]
+                 [bostonou/cljs-pprint "0.0.1"]
                  [venantius/accountant "0.1.5"
                   :exclusions [org.clojure/tools.reader]]
                  
@@ -53,7 +54,15 @@
                              :compiler {:output-to "target/cljsbuild/public/js/app.js"
                                         :output-dir "target/cljsbuild/public/js/out"
                                         :asset-path   "js/out"
+                                        :foreign-libs [{:file "libs/im.min.js"
+                                                        :provides ["intermine.imjs"]}]
                                         :optimizations :none
+                                        :pretty-print  true}}
+                       :prod {:source-paths ["src/cljs" "src/cljc"]
+                             :compiler {:output-to "target/adv/app.js"
+                                        :foreign-libs [{:file "libs/im.min.js"
+                                                        :provides ["intermine.imjs"]}]
+                                        :optimizations :advanced
                                         :pretty-print  true}}}}
 
   :profiles {:dev {:repl-options {:init-ns id-resolver.repl}
